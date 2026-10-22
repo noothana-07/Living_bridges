@@ -1,0 +1,222 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #142624;
+  color: #f5eee1;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 38px 8%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  /* Dog photo background */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 24, 22, 0.86),
+      rgba(9, 24, 22, 0.48) 55%,
+      rgba(9, 24, 22, 0.08)
+    ),
+    url("dog-hero.png.jpg") center center / cover no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+.logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+.top-note,
+.eyebrow,
+.subtitle {
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.content {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 65px 0;
+  animation: appear 1s ease;
+}
+
+.eyebrow {
+  color: #c2d79d;
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(70px, 9vw, 125px);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -4px;
+}
+
+h1 em {
+  color: #c2d79d;
+  font-weight: 500;
+}
+
+.subtitle {
+  margin-top: 35px;
+  line-height: 2;
+}
+
+.line {
+  width: 45px;
+  height: 1px;
+  background: #f5eee1;
+  margin: 30px 0;
+}
+
+.button {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  text-decoration: none;
+  color: #f5eee1;
+  border: 1px solid #f5eee1;
+  border-radius: 50px;
+  padding: 17px 25px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  color: #142624;
+  background: #f5eee1;
+}
+
+.button span {
+  font-size: 18px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: auto;
+}
+
+.feature {
+  min-width: 125px;
+  padding: 0 20px;
+  border-right: 1px solid #ffffff45;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  text-align: center;
+}
+
+.feature:first-child {
+  padding-left: 0;
+}
+
+.feature span {
+  font-size: 30px;
+  color: #c2d79d;
+}
+
+.feature small {
+  font-size: 8px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.quote {
+  margin-left: auto;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 23px;
+  text-align: center;
+  transform: rotate(-6deg);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 25px 22px;
+    background-position: 60% center;
+  }
+
+  .logo span {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .top-note {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .content {
+    padding: 80px 0;
+  }
+
+  h1 {
+    font-size: clamp(65px, 16vw, 95px);
+  }
+
+  .eyebrow,
+  .subtitle {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .feature {
+    flex: 1;
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  .feature small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .quote {
+    width: 100%;
+    text-align: right;
+    font-size: 21px;
+  }
+}
